@@ -1,0 +1,29 @@
+{
+  "name": "secure-password-generator",
+  "version": "1.0.0",
+  "description": "A secure cryptographically strong random password generator",
+  "type": "module",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:coverage:view": "jest --coverage && open coverage/lcov-report/index.html",
+    "test:verbose": "jest --verbose",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  },
+  "keywords": [
+    "password",
+    "generator",
+    "secure",
+    "random",
+    "crypto"
+  ],
+  "author": "Chris Fouad Jabbour",
+  "license": "MIT"
+}
