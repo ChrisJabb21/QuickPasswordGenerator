@@ -72,6 +72,7 @@ Tests for the `generatePassword()` function that generates secure passwords.
 ### Prerequisites
 
 Install dependencies:
+
 ```bash
 npm install
 ```
