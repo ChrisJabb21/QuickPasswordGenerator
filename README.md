@@ -21,8 +21,7 @@ App returns:
 
 ## MVP Fucntionality Features
 
-- Generate passwords (length, charset options)
-- Copy to clipboard
+- Generate passwords
 - No backend (pure client-side)
 
 ## Enchancements and WIP
@@ -32,9 +31,9 @@ App returns:
   - lowercase yes/no
   - numbers yes/no
   - symbols yes/no
+- Copy to clipboard
 - Entropy score (real calculation, not fake meter)
 - Generate multiple passwords at once (at least 2)
-
 
 ## Development Workflow
 
@@ -54,8 +53,8 @@ AI tooling was used for:
 The primary focus of this project was understanding and improving the implementation independently while strengthening skills in:
 
 - JavaScript
-- secure password generation
+- Secure password generation
 - Web Crypto API usage
-- DOM manipulation
-- frontend architecture
-- secure coding practices
+- DOM manipulation (Vanilla JavaScript at the moment)
+- Frontend architecture (applying responsive web design)
+- Secure coding practices
