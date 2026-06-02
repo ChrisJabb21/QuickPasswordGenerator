@@ -2,7 +2,7 @@
 
 A UI project for generating secure passwords for the busy user as part of the learn javascript path from Scrimba
 
-Working Title: Passcraft — a privacy-first password & passphrase generator
+Working Title: SecurePasscraft — a privacy-first password & passphrase generator
 
 Tagline: ***“In math, we trust; Strong by default and using (strong pseudo) randomness.”***
 
@@ -10,8 +10,7 @@ Tagline: ***“In math, we trust; Strong by default and using (strong pseudo) ra
 
 App returns:
 
-- generated password
-- copy button (WIP)
+- generated password (default password of 20 characters with symbols, letters, and numbers)
 
 ## Security features
 
