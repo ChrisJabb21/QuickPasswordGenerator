@@ -14,7 +14,7 @@ export function generatePassword({
     lowerCase = true,
     upperCase = true,
     digits= true,
-    symbols = false,
+    symbols = true,
     noLookAlikes = true
 }) {
     // The sets object defines the character sets for lowercase letters, uppercase letters, digits, and symbols. Each property of the sets object contains a string of characters that belong to that set.
