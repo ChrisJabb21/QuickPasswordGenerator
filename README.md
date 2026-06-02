@@ -2,7 +2,7 @@
 
 A UI project for generating secure passwords for the busy user as part of the learn javascript path from Scrimba
 
-Working Title: SecurePasscraft — a privacy-first password & passphrase generator
+Working Title: SecurePassCraft — a privacy-first password & passphrase generator
 
 Tagline: ***“In math, we trust; Strong by default and using (strong pseudo) randomness.”***
 
