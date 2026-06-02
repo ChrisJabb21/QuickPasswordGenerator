@@ -8,32 +8,33 @@ Tagline: ***“In math, we trust; Strong by default and using (strong pseudo) ra
 
 ## Process Workflow
 
-User chooses:
-
-- password length
-- uppercase yes/no
-- lowercase yes/no
-- numbers yes/no
-- symbols yes/no
-
 App returns:
 
 - generated password
-- copy button
+- copy button (WIP)
 
 ## Security features
 
 - use crypto.getRandomValues(), not Math.random()
-- require at least one character set
-- enforce minimum length, maybe 12+
+- enforce minimum length, 12+ characters
 - show strength feedback
 
 ## MVP Fucntionality Features
 
 - Generate passwords (length, charset options)
-- Entropy score (real calculation, not fake meter)
 - Copy to clipboard
 - No backend (pure client-side)
+
+## Enchancements and WIP
+- Ability to let user choose and customize any of following:
+  - password length (no less than 8 characters as per recommended password strength and best practices)
+  - uppercase yes/no
+  - lowercase yes/no
+  - numbers yes/no
+  - symbols yes/no
+- Entropy score (real calculation, not fake meter)
+- Generate multiple passwords at once (at least 2)
+
 
 ## Development Workflow
 
