@@ -1,8 +1,8 @@
 # QuickPasswordGenerator
 
-A web app project for generating secure passwords via Cryptographically Secure Pseudorandom Number Generation (CSPRNG)
-useful for the busy user needing a hard to guess password for a password manager
-made as part of the learn javascript path from Scrimba
+A security-focused password generator built with the Web Crypto API. This project demonstrates cryptographically secure randomness, rejection sampling to eliminate modulo bias and secure password generation best practices. Useful for the busy user needing a hard to guess password for a password manager. Adapted from project to create on my own from the learn javascript path from Scrimba.
+
+TLDR; A web app project for generating secure passwords via Cryptographically Secure Pseudorandom Number Generation (CSPRNG). 
 
 Title: SecurePassCraft — a privacy-first password & passphrase generator
 
@@ -12,28 +12,31 @@ Tagline: ***“In math or cryptography, we trust for security; ”***
 
 App returns:
 
-- generated password (default password of 20 characters with symbols, letters, and numbers)
+- Generated strong password
+  - default password of 20 characters with symbols, letters (uppercase and lowercase), and numbers
 
 ## Security features
 
 - use crypto.getRandomValues(), not Math.random()
-- enforce minimum length, 12+ characters
+- enforce minimum length recommended which 15+ characters
 - show strength feedback
 
-## MVP Fucntionality Features
+## Minimum Viable Project (MVP) Fucntionality Features
 
 - Generate passwords
+- Responsive UI
+- Rejection sampling to solve issue of modulo bias
 - No backend (pure client-side)
 
-## Enchancements and WIP
-- Ability to let user choose and customize any of following:
-  - password length (no less than 8 characters as per recommended password strength and best practices)
+## Work-In-Progresss (WIP) Roadmap
+- Ability to let user customize how the password is made based on following criteria:
+  - password length (Ability to show recommended password strength based on best practices)
   - uppercase yes/no
   - lowercase yes/no
   - numbers yes/no
   - symbols yes/no
 - Copy to clipboard
-- Entropy score (real calculation, not fake meter)
+- Entropy score 
 - Generate multiple passwords at once (at least 2)
 
 ## Development Workflow
@@ -59,3 +62,4 @@ The primary focus of this project was understanding and improving the implementa
 - DOM manipulation (Vanilla JavaScript at the moment)
 - Frontend architecture (applying responsive web design)
 - Secure coding practices
+- Git workflows
