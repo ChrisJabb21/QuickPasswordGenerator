@@ -17,9 +17,7 @@ App returns:
 
 ## Security features
 
-- use crypto.getRandomValues(), not Math.random()
-- enforce minimum length recommended which 15+ characters
-- show strength feedback
+- use of crypto.getRandomValues(), not Math.random()
 
 ## Minimum Viable Project (MVP) Fucntionality Features
 
