@@ -45,12 +45,11 @@ AI tooling was used for:
 
 - code review and refactoring suggestions
 - debugging assistance
-- Learning-focused approach
-- Knowledge checks on concepts used in the code
+- Learning-focused approach and vetting LLM output
+- Knowledge checks for developer on concepts used in the code
 - generating and improving test cases
-- explaining implementation details and security concepts
 - accelerating frontend iteration and UI planning
-- Defer to resources to specific concepts
+- Defer to resources for understanding specific concepts and room for improvement
 
 The primary focus of this project was understanding and improving the implementation independently while strengthening skills in:
 
