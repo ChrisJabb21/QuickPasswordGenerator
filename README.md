@@ -4,7 +4,7 @@ A security-focused password generator built with the Web Crypto API. This projec
 
 TLDR; A web app project for generating secure passwords via Cryptographically Secure Pseudorandom Number Generation (CSPRNG). 
 
-Title: SecurePassCraft — a privacy-first password & passphrase generator
+Title: SecurePassCraft - a privacy-first password & passphrase generator
 
 Tagline: ***“In math or cryptography, we trust for security; ”***
 
