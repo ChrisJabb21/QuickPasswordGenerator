@@ -13,7 +13,7 @@ Tagline: ***“In math or cryptography, we trust for security; ”***
 App returns:
 
 - Generated strong password
-  - default password of 20 characters with symbols, letters (uppercase and lowercase), and numbers
+  - default password of 16 characters with symbols, letters (uppercase and lowercase), and numbers
 
 ## Security features
 
