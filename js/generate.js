@@ -10,7 +10,7 @@
 import { secureRandomInt } from "./cryptoRandom.js";
 
 export function generatePassword({
-    length = 16,
+    length = 20,
     lowerCase = true,
     upperCase = true,
     digits= true,

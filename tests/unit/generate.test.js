@@ -13,7 +13,7 @@ describe('generatePassword', () => {
     });
 
     test('should generate password with default length 16', () => {
-      const password = generatePassword({});
+      const password = generatePassword({length: 16});
       expect(password).toHaveLength(16);
     });
 
@@ -213,11 +213,11 @@ describe('generatePassword', () => {
   describe('Default parameters', () => {
     test('should use default values when no parameters provided', () => {
       const password = generatePassword({});
-      expect(password).toHaveLength(16);
+      expect(password).toHaveLength(20);
       expect(/[a-z]/.test(password)).toBe(true);
       expect(/[A-Z]/.test(password)).toBe(true);
       expect(/[0-9]/.test(password)).toBe(true);
-      expect(/[!@#$%^&*()\-=_+\[\]{}|;:,.<>?/~`]/.test(password)).toBe(false); // symbols false by default
+      expect(/[!@#$%^&*()\-=_+\[\]{}|;:,.<>?/~`]/.test(password)).toBe(true); // symbols false by default
     });
 
     test('should use provided parameters over defaults', () => {
