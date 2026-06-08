@@ -4,28 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePassCraft: Secure Password Generator</title>
+    <script type="module" src="js/index.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <meta name="description" content="Generate strong, unique passwords with SecurePassCraft — fast, secure, no guesswork.">
 </head>
-<script type="module" src="js/index.js"></script>
-
 <body>
-    <h1>SecurePassCraft: Password Generator</h1>
-    <h2>Generate strong passwords with just one click!</h2>
     <div>
-        <div class="btn-wrapper">
-            <button class="btn" id="generateButton">Generate Password</button>
-            <div class="password-wrapper">
-                <span class="password" id="output"></span>
-                <dialog id="messageModal">
-                    <div class="modal-content">
-                        <p>Password copied to clipboard! (tap to close)</p>
-                </dialog>
+        <h1 class="hero-title">SecurePassCraft
+            <br />
+            <span class="hero-accent">Password Generator</span>
+        </h1>
+        <h2 class="hero-subtitle"> No guesswork. Strong passwords. </h2>
+        <div>
+            <div class="btn-wrapper">
+                <button class="generate-btn" id="generateButton">Generate Password</button>
             </div>
+
+            <div class="divider-wrapper">
+                <hr class="divider" />
+            </div>
+
+            <div class="password-wrapper">
+                <output class="password" id="output"></output>
+            </div>
+            <dialog id="messageModal">
+                <div class="modal-content">
+                    <p>Password copied to clipboard! (tap to close)</p>
+                </div>
+            </dialog>
         </div>
     </div>
 </body>
 <footer>
     <p>Created by <a href="https://github.com/chrisjabb21" target="_blank">Chris Fouad Jabbour</a></p>
 </footer>
-
 </html>

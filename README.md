@@ -2,7 +2,7 @@
 
 A security-focused password generator built with the Web Crypto API. This project demonstrates cryptographically secure randomness, rejection sampling to eliminate modulo bias and secure password generation best practices. Useful for the busy user needing a hard to guess password for a password manager. Adapted from project to create on my own from the learn javascript path from Scrimba.
 
-TLDR; A web app project for generating secure passwords via Cryptographically Secure Pseudorandom Number Generation (CSPRNG). 
+TLDR; A web app project for generating secure passwords via Cryptographically Secure Pseudorandom Number Generation (CSPRNG).
 
 Title: SecurePassCraft - a privacy-first password & passphrase generator
 
@@ -22,18 +22,19 @@ App returns:
 ## Minimum Viable Project (MVP) Fucntionality Features
 
 - Generate passwords
-- Responsive UI
+- Responsive UI with color palette
 - Rejection sampling to solve issue of modulo bias
 - No backend (pure client-side)
 
 ## Work-In-Progresss (WIP) Roadmap
+
 - Ability to let user customize how the password is made based on following criteria:
   - password length (Ability to show recommended password strength based on best practices)
   - uppercase yes/no
   - lowercase yes/no
   - numbers yes/no
   - symbols yes/no
-- Copy to clipboard
+- ~~Copy to clipboard~~
 - Entropy score 
 - Generate multiple passwords at once (at least 2)
 

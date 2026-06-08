@@ -1,5 +1,7 @@
 /* this file is responsible for handling the user interface and interactions of the password generator application. 
-It imports the necessary functions from other modules, initializes variables, and sets up event listeners for user actions such as generating a new password and copying it to the clipboard.
+It imports the necessary functions from other modules, 
+initializes variables, and sets up event listeners 
+for user actions such as generating a new password and copying it to the clipboard.
  The code ensures that the generated password is displayed to the user and provides feedback when the password is copied successfully.
 @returns {void} This function does not return a value but updates the user interface with the generated password and handles user interactions.
 */
@@ -41,6 +43,7 @@ generatePasswordButton.addEventListener("click", () => {
 
 passwordOutput.addEventListener("click", async () => {
         await navigator.clipboard.writeText(passwordOutput.textContent);
+        if (output.textContent === "") return; // Don't show modal if there's no password to copy 
         passwordOutput.style.cursor = "pointer";
         modal.showModal(); 
 });
