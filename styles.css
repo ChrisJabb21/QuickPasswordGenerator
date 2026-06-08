@@ -1,63 +1,155 @@
+/**
+* styles.css
+.app
+.password-card
+.hero-title
+.hero-accent
+.hero-subtitle
+.generate-btn
+.password-wrapper
+.password-output
 
+*/
 
-.btn-wrapper,.password-wrapper, .password {
-    flex-wrap: wrap;
-    max-width: 100%;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    justify-content: center;
-}
+/*Color palette*/
+:root {
+--page-bg: #111827;
+--card-bg: #1f2937;
+--accent: #10b981;
+--password-text: #34D399;
+--accent-hover: #059669;
+--main-text: #f9fafb;
+--muted-text: #d1d5db;
 
-.btn {
-    margin: auto;
-    background: #dfe1e5;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0 0.25rem 0.25rem rgba(60, 64, 67, .3), 0 2px 6px rgba(60, 64, 67, .15);
-    font-size: 0.875rem;
+  --content-width: 320px;
+
 }
 
 body {
-    color: #121212;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    background-color: var(--page-bg);
+    color: var(--main-text);
+    margin:0;
+    min-height: 100vh;
     text-align: center;
     width: auto;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: column;
 }
 
-img {
-    width: 380px;
-    max-width: 100%;
-    border-width: 3px;
-    border-color: #121212;
-    border-style: solid;
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.hero-accent {
+    color: var(--accent);
+}
+
+.hero-subtitle {
+    color: var(--muted-text);
+    font-size: 1.25rem;
+    margin: 2rem 0 0rem 0;
+    font-weight: 500;
+    max-width: 90vw;
+    animation: 
+    typing 2s steps(37, end), /* Adjust the steps to match the number of characters in the subtitle */
+    blink-caret .75s step-end;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .5rem solid var(--accent); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Centers the subtitle */
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-subtitle {
+    animation: none;
+    border-right: none;
+  }
+}
+
+.btn-wrapper,
+.password-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: var(--content-width);
+}
+
+.generate-btn {
+    margin: 2rem auto;
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    color: var(--main-text);
+    cursor: pointer;
+    font-size: 18px;
+    touch-action: manipulation;
+    padding: 1rem;
+    width: 100%;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+
+}
+.generate-btn:hover {
+    background: var(--accent-hover);
+}
+
+.generate-btn:active {
+  transform: scale(0.98); /* Subtle click feedback */
+}
+
+.password {    
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    color: var(--password-text);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: var(--content-width);
+    padding: 1rem;
+    touch-action: manipulation;
+}
+
+.divider {
+    border:none;
+    border-top: 1px solid var(--muted-text);
+    opacity: 0.5;
+    width: 100%;
+    
+}
+
+.divider-wrapper{
+    width: 100%;
+    margin: 1rem auto;
+    max-width: 75%;
 }
 
 a {
-    color: #121212;
+    color: var(--accent);
 }
 
-button, input {
+.messageModal {
+    background: transparent; 
+    border: none;
     display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    border-width: 3px;
-    border-color: #121212;
-    border-style: solid;  
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-
-input {
-    margin-bottom:10px;
-    width: 200px;
-    font-weight: bold;
+    align-items: center;
+    justify-content: center;
 }
