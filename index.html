@@ -1,21 +1,31 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <script type="module" src="js/index.js"></script>
-    <body>
-        <h1>PassCraft: Password Generator</h1>
-        <h2>Generate strong passwords with just one click!</h2>
-        <div>
-            <div class="btn-wrapper">
-                <button class="btn" id="generateButton">Generate Password</button>
-                <div class="password-wrapper">
-                    <span class="password" id="output"></span>
-                </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<script type="module" src="js/index.js"></script>
+
+<body>
+    <h1>SecurePassCraft: Password Generator</h1>
+    <h2>Generate strong passwords with just one click!</h2>
+    <div>
+        <div class="btn-wrapper">
+            <button class="btn" id="generateButton">Generate Password</button>
+            <div class="password-wrapper">
+                <span class="password" id="output"></span>
+                <dialog id="messageModal">
+                    <div class="modal-content">
+                        <p>Password copied to clipboard! (tap to close)</p>
+                </dialog>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+<footer>
+    <p>Created by <a href="https://github.com/chrisjabb21" target="_blank">Chris Fouad Jabbour</a></p>
+</footer>
+
 </html>
