@@ -6,7 +6,7 @@ TLDR; A web app project for generating secure passwords via Cryptographically Se
 
 Title: SecurePassCraft - a privacy-first password & passphrase generator
 
-Tagline: ***“In math or cryptography, we trust for security; ”***
+Tagline: ***“In math we trust (for security) ”***
 
 ## Process Workflow
 
@@ -17,11 +17,12 @@ App returns:
 
 ## Security features
 
-- use of crypto.getRandomValues(), not Math.random()
+- use of crypto.getRandomValues() in password generation, not Math.random()
 
 ## Minimum Viable Project (MVP) Fucntionality Features
 
 - Generate passwords
+- Copy password(s) to clipboard with a click
 - Responsive UI with color palette
 - Rejection sampling to solve issue of modulo bias
 - No backend (pure client-side)
@@ -30,6 +31,7 @@ App returns:
 
 - Ability to let user customize how the password is made based on following criteria:
   - password length (Ability to show recommended password strength based on best practices)
+    - set the length of password otherwise generate with default length
   - uppercase yes/no
   - lowercase yes/no
   - numbers yes/no
