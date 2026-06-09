@@ -6,50 +6,64 @@ for user actions such as generating a new password and copying it to the clipboa
 @returns {void} This function does not return a value but updates the user interface with the generated password and handles user interactions.
 */
 
-import {generatePassword } from "./generate.js";
+import { generatePassword } from "./generate.js";
 import { estimateEntropyBits } from "./entropy.js";
 
-//Initial variable initialization
-const password = generatePassword({
-    length: 20,
-    lowerCase: true,
-    upperCase: true,
-    digits: true,
-    symbols: true,
+const CONFIG = {
+  SECURITY_PRESETS: {
+    moderate: 15,
+    default: 20,
+    strong: 24,
+    highSecurity: 32,
+    quantumResistant: 40
+  },
+  CHARACTER_SET_SIZE: 26 + 26 + 10 + 24, // lowercase + uppercase + digits + symbols
+  PASSWORD_COUNT: 2 // number of passwords to generate
+};
+
+const entropy = estimateEntropyBits(20, CONFIG.CHARACTER_SET_SIZE);
+
+const passwordOutputs = [
+  document.getElementById("password0"),
+  document.getElementById("password1")
+];
+
+
+passwordOutputs.forEach((output) => {
+  output.style.cursor = "pointer";
 });
 
-const characterSetSize = 26 + 26 + 10 + 24; // lowercase + uppercase + digits + symbols
-const entropy = estimateEntropyBits(20, characterSetSize)
-const passwordOutput = document.getElementById("output");
-const generatePasswordButton = document.getElementById("generateButton");
+const generatePasswordsButton = document.getElementById("generateButton");
 const modal = document.getElementById('messageModal');
-
-generatePasswordButton.style.cursor = "pointer"
-
+const selectedLengthElement = document.getElementById("passwordLength")
 
 //Event listeners 
-generatePasswordButton.addEventListener("click", () => {
-    const password = generatePassword({
-        length: 20,
-        lowerCase: true,
-        upperCase: true,
-        digits: true,
-        symbols: true,
-    });
-    const characterSetSize = 26 + 26 + 10 + 24; // lowercase + uppercase + digits + symbols
-    const entropy = estimateEntropyBits(20, characterSetSize);
-    output.textContent = password;
-});
+generatePasswordsButton.addEventListener("click", () => {
+  
+  const selectedLength = selectedLengthElement.value
 
-passwordOutput.addEventListener("click", async () => {
-        await navigator.clipboard.writeText(passwordOutput.textContent);
-        if (output.textContent === "") return; // Don't show modal if there's no password to copy 
-        passwordOutput.style.cursor = "pointer";
-        modal.showModal(); 
+  const passwords = passwordOutputs.map(() => {
+    return generatePassword({
+      length: CONFIG.SECURITY_PRESETS[selectedLength]
+    });
+  });
+
+  passwordOutputs.forEach((output, index) => {
+    output.textContent = passwords[index];
+    output.addEventListener("click", async () => {
+
+      if (passwordOutputs.textContent === "") return; // Don't show modal if there's no password to copy 
+      try {
+        await navigator.clipboard.writeText(output.textContent);
+        modal.showModal();
+      } catch (error) {
+        console.error("Failed to copy password:", error);
+      }
+    });
+  });
 });
 
 modal.addEventListener('click', (event) => {
-  const rect = modal.getBoundingClientRect();
   if (event.target.tagName !== 'BUTTON') {
     modal.close();
   }

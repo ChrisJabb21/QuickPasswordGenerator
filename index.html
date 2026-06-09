@@ -8,8 +8,10 @@
     <script type="module" src="js/index.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <meta name="description" content="Generate strong, unique passwords with SecurePassCraft — fast, secure, no guesswork.">
+    <meta name="description"
+        content="Generate strong, unique passwords with SecurePassCraft — fast, secure, no guesswork.">
 </head>
+
 <body>
     <div>
         <h1 class="hero-title">SecurePassCraft
@@ -19,7 +21,17 @@
         <h2 class="hero-subtitle"> No guesswork. Strong passwords. </h2>
         <div>
             <div class="btn-wrapper">
-                <button class="generate-btn" id="generateButton">Generate Password</button>
+                <div class="length-selector">
+                <label for="passwordLength" class="length-label">Password Length:</label>
+                <select id="passwordLength" class="length-select">
+                    <option value="moderate">Moderate - 15 characters</option>
+                    <option value="default">Default - 20 characters</option>
+                    <option value="strong">Strong - 24 characters</option>
+                    <option value="highSecurity">High Security - 32 characters</option>
+                    <option value="quantumResistant">Quantum Resistant - 40 characters</option>
+                </select>
+                </div>
+                <button class="generate-btn" id="generateButton">Generate Passwords</button>
             </div>
 
             <div class="divider-wrapper">
@@ -27,7 +39,10 @@
             </div>
 
             <div class="password-wrapper">
-                <output class="password" id="output"></output>
+                <div class="passwords">
+                    <output class="password" id="password0"></output>
+                    <output class="password" id="password1"></output>
+                </div>
             </div>
             <dialog id="messageModal">
                 <div class="modal-content">
@@ -40,4 +55,5 @@
 <footer>
     <p>Created by <a href="https://github.com/chrisjabb21" target="_blank">Chris Fouad Jabbour</a></p>
 </footer>
+
 </html>
