@@ -30,15 +30,14 @@ App returns:
 ## Work-In-Progresss (WIP) Roadmap
 
 - Ability to let user customize how the password is made based on following criteria:
-  - password length (Ability to show recommended password strength based on best practices)
-    - set the length of password otherwise generate with default length
+  - ~~set the length of password otherwise generate with default length~~
   - uppercase yes/no
   - lowercase yes/no
   - numbers yes/no
   - symbols yes/no
 - ~~Copy to clipboard~~
 - Entropy score 
-- Generate multiple passwords at once (at least 2)
+- ~~Generate multiple passwords at once (at least 2)~~
 
 ## Development Workflow
 
