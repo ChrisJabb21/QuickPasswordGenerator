@@ -1,4 +1,4 @@
-# QuickSecurePasswordGenerator
+# SecurePasswordGenerator
 
 A security-focused password generator built with the Web Crypto API. This project demonstrates cryptographically secure randomness, rejection sampling to eliminate modulo bias and secure password generation best practices. Useful for the busy user needing a hard to guess password for a password manager. Adapted from project to create on my own from the learn javascript path from Scrimba.
 
