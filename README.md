@@ -24,8 +24,7 @@ App returns:
 - Generate passwords
 - Copy password(s) to clipboard with a click
 - Responsive UI with color palette
-- Rejection sampling to solve issue of modulo bias
-- No backend (pure client-side)
+- Rejection sampling to solve issue of modulo bias 
 
 ## Work-In-Progresss (WIP) Roadmap
 
