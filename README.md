@@ -12,8 +12,9 @@ Tagline: ***“In math we trust (for security) ”***
 
 App returns:
 
-- Generated strong password
-  - default password of 20 characters with symbols, letters (uppercase and lowercase), and numbers
+- Generated  password
+  - default password of 20 characters with symbols, letters (uppercase and lowercase), and numbers.
+    - length can be changed to use increased or decreased characters
 
 ## Security features
 
