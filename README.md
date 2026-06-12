@@ -8,6 +8,10 @@ Title: SecurePassCraft - a privacy-first password & passphrase generator
 
 Tagline: ***“In math we trust (for security) ”***
 
+![gif of someone opening a locked door with a easy to break security flaw, like an account with a weak password.](IMG_6393.gif)
+
+
+
 ## Process Workflow
 
 App returns:
